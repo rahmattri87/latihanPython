@@ -1,20 +1,83 @@
+# ==== Accessing Elements from Dictionary ====
 
-# 1. Manipulasi sebuah bilangan  nilai dictionary
-# diketahui     --->    a = {1,2,4,6,8,9,10,5,3,7}
-# ketentuan     --->    a. urutkan bilangan dari terkecil hingga terbesar
-#                             ---> a = {1,2,3,4,5,6,7,8,9,10}
-#                       b. cari bilagan terkecil    ---> 1
-#                       c. cari bilagan terbesar    ---> 10
+# get vs [] for retrieving elements
+my_dict = {'name': 'Jack', 'age': 26}
 
-# 2. periksa bilangan jika terdapat didalam sebuah nilai dictionary
-# diketahui     ---> d = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
-# Ketentuan     --->    a. jika di input(9), maka hasil False (*check if exist)
-#                       b. kelompokan bilangan ganjil   ---> d = {1: 10, 3: 30, 5: 50}
-#                       c. kelompokan bilangan genap    ---> d = {2: 20, 4: 40, 6: 60}
+# Output: Jack
+print(my_dict['name'])
 
-# 3. Buatlah sebuah nilai dictionary yang menghasilkan data dari sebuah rumusan berikut :
-# diketahui     ---> jika nilai input diberikan adalah 5
-# ketentuan     ---> tentukan rumusan/logic program
-# hasil print   ---> a. ---> d = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
-# hasil print   ---> b. ---> d = {1: 13, 2: 25, 3: 37, 4: 49, 5: 61}
+# Output: 26
+print(my_dict.get('age'))
 
+# Trying to access keys which doesn't exist throws error
+# Output None
+print(my_dict.get('address'))
+
+# KeyError
+# print(my_dict['address'])
+
+
+# # ==== Changing and Adding Dictionary elements ====
+
+# # Changing and adding Dictionary Elements
+# my_dict = {'name': 'Jack', 'age': 26}
+
+# # update value
+# my_dict['age'] = 27
+
+# #Output: {'age': 27, 'name': 'Jack'}
+# print(my_dict)
+
+# # add item
+# my_dict['address'] = 'Downtown'
+
+# # Output: {'address': 'Downtown', 'age': 27, 'name': 'Jack'}
+# print(my_dict)
+
+
+# # ==== Removing elements from Dictionary ====
+
+# # Removing elements from a dictionary
+
+# # create a dictionary
+# squares = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# # remove a particular item, returns its value
+# # Output: 16
+# print(squares.pop(4))
+
+# # Output: {1: 1, 2: 4, 3: 9, 5: 25}
+# print(squares)
+
+# # remove an arbitrary item, return (key,value)
+# # Output: (5, 25)
+# print(squares.popitem())
+
+# # Output: {1: 1, 2: 4, 3: 9}
+# print(squares)
+
+# # remove all items
+# squares.clear()
+
+# # Output: {}
+# print(squares)
+
+# # delete the dictionary itself
+# del squares
+
+# # Throws Error
+# print(squares)
+
+# # ==== Python Dictionary Methods ====
+
+# # Dictionary Methods
+# marks = {}.fromkeys(['Math', 'English', 'Science'], 0)
+
+# # Output: {'English': 0, 'Math': 0, 'Science': 0}
+# print(marks)
+
+# for item in marks.items():
+#     print(item)
+
+# # Output: ['English', 'Math', 'Science']
+# print(list(sorted(marks.keys())))
