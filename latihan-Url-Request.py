@@ -22,8 +22,8 @@ def total_indonesia():
     url = "https://api.kawalcorona.com/indonesia/"
     data = requests.get(url).text
     obj = json.loads(data)
-    #print(data)
-    #exit()
+    # print(data)
+    # exit()
     for summary in obj:
         print('*** TOTAL COVID-19 INDONESIA')
         print('----------------------------------------')

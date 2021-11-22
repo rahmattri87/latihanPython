@@ -1,55 +1,21 @@
-# Ambil input untuk mengisi nilai
-a = int(input("Inputkan nilai a: "))
-b = int(input("Inputkan nilai b: "))
-#
-# # Menggunakan operator penjumlahan
-# c = a + b
-# # print("Hasil %d + %d = %d" % (a,b,c))
-#
-# print("cara ke 1 cetak --> Hasil %d %d" % (a,c))
-# print("cara ke 2 cetak --> angka a = " , a , " angka b = ", b , " angka c = ", c)
-#
-# # Operator Pengurangan
-# c = a - b
-# print("Hasil %d - %d = %d" % (a,b,c))
-#
-# # Operator Perkalian
-# c = a * b
-# print("Hasil %d * %d = %d" % (a,b,c))
-#
-# # Operator Pembagian
-# c = a / b
-# print("Hasil %d / %d = %d" % (a,b,c))
-#
-# # Operator Sisa Bagi
-# c = a % b
-# print("Hasil %d %% %d = %d" % (a,b,c))
-#
-# # Operator Pangkat
-# c = a ** b
-# print("Hasil %d ** %d = %d" % (a,b,c))
+# Chcek version --> pip -V
+# download lib Request --> pip install requests
+# download lib PrettyTable --> pip install PrettyTable || pip3 install PrettyTable
+
+import requests
+
+req = requests.get('https://tutsplus.com/')
+req.encoding  # returns 'utf-8'
+status = req.status_code  # returns 200
+
+# print(status)
+
+# req.elapsed  # returns datetime.timedelta(0, 1, 666890)
+req.url  # returns 'https://tutsplus.com/'
+req.history
+print(req.url)
 
 
-# # apakah a sama dengan b?
-# c = a == b
-# print("Apakah %d == %d: %r" % (a,b,c))
-#
-# # apakah a < b?
-# c = a < b
-# print ("Apakah %d < %d: %r" % (a,b,c))
-#
-# # apakah a > b?
-# c = a > b
-# print ("Apakah %d > %d: %r" % (a,b,c))
-#
-# # apakah a <= b?
-# c = a <= b
-# print ("Apakah %d <= %d: %r" % (a,b,c))
-#
-# # apakah a >= b?
-# c = a >= b
-# print ("Apakah %d >= %d: %r" % (a,b,c))
-#
-# # apakah a != b?
-# c = a != b
-# print ("Apakah %d != %d: %r" % (a,b,c))
+# r = requests.get('https://api.github.com/events')
+# # r.text
+# print(r.json())
