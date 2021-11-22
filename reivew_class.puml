@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'interface test
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+abstract class Indonesia {
+    String nama
+    Int jumlah_pulau
+    Int jumlah_provinsi
+    String type
+    fact()
+    requestInfo()
+}
+
+class Provinsi {
+    view()
+}
+
+class Kota {
+    view()
+}
+
+class Kecamatan {
+    view()
+}
+
+class Kelurahan {
+    view()
+}
+
+class Menu {
+    run()
+    view()
+    finish()
+}
+
+Indonesia <|-- Provinsi
+Indonesia <|-- Kota
+Indonesia <|-- Kecamatan
+Indonesia <|-- Kelurahan
+
+Menu -- Indonesia
+
+
+@enduml

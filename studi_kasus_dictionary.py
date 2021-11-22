@@ -18,3 +18,51 @@
 # hasil print   ---> a. ---> d = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
 # hasil print   ---> b. ---> d = {1: 13, 2: 25, 3: 37, 4: 49, 5: 61}
 
+#--------------------------------------------------------------------------------------------#
+
+a = [1,2,4,6,8,9,10,5,3,7]
+
+b = sorted(a, reverse=False)
+print("Urutan bilangan dari terkecil hingga terbesar a = ",b)
+
+c = sorted(a, reverse=True)
+print("Urutan bilangan dari terbesar hingga terkecil a = ",c)
+
+print("bilangan terkecil = ",min(a))
+print("bilangan terbesar = ",max(a))
+
+#--------------------------------------------------------------------------------------------#
+
+# Dictionary Comprehension
+d = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+ganjil = dict(
+        filter(lambda e:e[0] % 2 == 1, d.items()) 
+    )
+    
+genap = dict(
+        filter(lambda e:e[0] % 2 == 0, d.items()) 
+    )    
+
+print("Kelompok bilangan ganjil d = ",ganjil)
+print("Kelompok bilangan genap d = ",genap)
+
+#--------------------------------------------------------------------------------------------#
+
+squares = {}
+angka=int(input("\nMasukan Angka : "))
+
+for x in range(angka):
+    squares[x] = x*10
+    
+print("Kelompok squares A = ",squares)
+
+incr = 3
+for x in range(angka):
+    squares[x] = ((x+1)*10) + incr
+    incr = (incr + 2)
+    
+print("Kelompok squares B = ",squares)    
+
+
+#--------------------------------------------------------------------------------------------#
